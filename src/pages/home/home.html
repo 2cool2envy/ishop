@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="primary2">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ <p text-center style="margin:1%;">The quote service will be here</p>
+<div  id="demo" class="carousel slide" data-ride="carousel" style="padding: 7px;">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="http://wowslider.com/sliders/demo-10/data/images/dock.jpg" alt="Los Angeles" width="100%" height="150">
+    </div>
+    <div class="carousel-item">
+      <img src="http://wowslider.com/sliders/demo-10/data/images/autumn_leaves.jpg" alt="Chicago" width="100%" height="150">
+    </div>
+    <div class="carousel-item">
+      <img src="http://wowslider.com/sliders/demo-10/data/images/dock.jpg" alt="New York" width="100%" height="150">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<div class="row customCard animated slideInRight">
+  
+      <div class="col-4"> <img style="width:100%;" src="https://cdn3.iconfinder.com/data/icons/users-avatars-2/128/superman-512.png" alt="Card image cap"></div>
+      <div class="col-8">
+         <h5 class="card-title">Card title</h5>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       
+      </div>
+  
+</div>
+<div class="row customCard animated slideInLeft">
+  
+    <div class="col-4"> <img style="width:100%;" src="https://cdn3.iconfinder.com/data/icons/users-avatars-2/128/superman-512.png" alt="Card image cap"></div>
+    <div class="col-8">
+       <h5 class="card-title">Card title</h5>
+       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>       
+    </div>
+</div>
+<div class="someButtons">
+    <button ion-button icon-start full (click)="homeButtons('c')"><ion-icon name="call"  ></ion-icon>Contact us</button>
+    <button ion-button icon-start full color="dark" (click)="homeButtons('p')"><ion-icon name="albums"></ion-icon>See products</button> 
+    <button ion-button icon-start full color="success2" (click)="homeButtons('c')"><ion-icon name="bulb"></ion-icon>Feedback/Suggestions</button> 
+ </div>
+ 
+
+
+
+
+ <ion-grid padding>
+    <ion-row>
+      
+      <ion-col col-6 *ngFor="let d of arr">
+         
+              <div class="sq animated pulse"> {{d.title}}</div> 
+         
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

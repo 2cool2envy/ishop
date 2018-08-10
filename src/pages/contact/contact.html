@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="primary2">
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-list >
+        <ion-list-header>Write us</ion-list-header>
+        <ion-item >
+         
+          <ion-item>
+              <ion-icon name="create" item-start class="animated flipInY"></ion-icon>
+              <ion-input type="email" placeholder="Your eMail" [(ngModel)]="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="bulb" item-start class="animated flipInY"></ion-icon>
+                <ion-textarea placeholder="Enter a description" [(ngModel)]="msg"></ion-textarea>
+              </ion-item>
+              <div text-right>
+                  <button ion-button icon-end full (click)="submit()" >
+                      Submit
+                       <ion-icon name="paper-plane"></ion-icon>
+                     </button>
+              </div>
+            
+        </ion-item>
+        
+      </ion-list>
+
+    <ion-list (click)="sendEmail()">
+        <ion-list-header>eMail (Developer)</ion-list-header>
+        <ion-item >
+          <ion-icon name="mail" item-start class="animated flipInY"></ion-icon>
+         kapoormohit01@gmail.com
+        </ion-item>
+      </ion-list>
+  <ion-list (click)="openBrowser('https://twitter.com/2cool2envy')">
+    <ion-list-header>Connect with us on Twitter</ion-list-header>
+    <ion-item>
+      <ion-icon name="logo-twitter" item-start class="animated flipInY"></ion-icon>
+      @2cool2envy
+    </ion-item>
+  </ion-list>
+  <ion-list>
+      <ion-list-header>Visit</ion-list-header>
+      <ion-item>
+        <ion-icon name="locate" item-start class="animated flipInY"></ion-icon>
+       The Name
+      </ion-item>
+      <ion-item (click)="openBrowser('https://www.google.com/maps/?q=31.53662,75.915668')">
+       <img style="width:100%;height:18em;" src="./assets/imgs/map.png">
+      </ion-item>
+    </ion-list>
+</ion-content>
